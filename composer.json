@@ -1,0 +1,45 @@
+{
+    "name": "zanysoft/laravel-hubspot",
+    "description": "Adds a Laravel specific wrapper for the Hubspot API V1 client package",
+    "keywords": [
+        "laravel",
+        "hubspot",
+        "api",
+        "service"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mubashar Ahmad",
+            "email": "info@zanysoft.net",
+            "homepage": "http://www.zanysoft.net"
+        }
+    ],
+    "require": {
+        "php": "^7.0 || ^8",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
+        "hubspot/hubspot-php": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": ">=3.4",
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZanySoft\\LaravelHubSpot\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ZanySoft\\LaravelHubSpot\\HubSpotServiceProvider"
+            ],
+            "aliases": {
+                "HubSpot": "ZanySoft\\LaravelHubSpot\\Facades\\HubSpot"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
